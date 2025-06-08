@@ -1,0 +1,52 @@
+# This is the configuration file for catnap.
+# Here you can configure the stat colors,
+# stat names, stat icons and more!
+#
+# https://github.com/iinsertNameHere/catnap
+
+##############################################
+##          FetchInfo stats Config          ##
+##############################################
+[stats]
+username  = {icon = " ", name = "Usuário", color = "(RD)"}
+hostname  = {icon = " ", name = "Máquina", color = "(RD)"}
+# uptime    = {icon = " ", name = "Tempo", color = "(BE)"}
+distro    = {icon = " ", name = "Distro", color = "(RD)"}
+kernel    = {icon = " ", name = "Kernel", color = "(RD)"}
+sep_de = "SEPARATOR"
+desktop   = {icon = " ", name = "Desktop", color = "(MA)"}
+terminal  = {icon = " ", name = "Terminal", color = "(MA)"}
+shell     = {icon = " ", name = "Shell", color = "(MA)"}
+# packages  = {icon = " ", name = "packages", color = "(RD)"}  # WARNING: Resource Intensive
+# weather   = {icon = " ", name = "weather", color = "(BE)"} # Requires curl and an emoji font. | WARNING: Resource Intensive
+sep_hardware = "SEPARATOR"
+cpu       = {icon = " ", name = "CPU", color = "(BE)"}
+gpu       = {icon = "󱔐 ", name = "GPU", color = "(BE)"}
+# battery   = {icon = " ", name = "battery", color = "(GN)"}
+memory    = {icon = " ", name = "Memória", color = "(BE)"}
+# The following stats do not work on MacOS and the BSDs.
+disk_0    = {icon = " ", name = "Disco", color = "(BE)"}
+sep_color = "SEPARATOR"
+colors    = {icon = " ", name = "Cores", color = "(YW)", symbol = ""}
+
+##############################################
+##               Misc Config                ##
+##############################################
+[misc]
+borderstyle = "line"
+layout = "Inline" # [Inline, ArtOnTop, StatsOnTop]
+stats_margin_top = 0
+location = "" # Used for fetching weather; leave empty to use the location of your IP; check https://wttr.in/:help for supported location types
+
+[misc.figletLogos] # Requires Figlet.
+enable = false
+color  = "(YW)"
+font   = "slant"
+margin = [0, 0, 0,]
+
+[misc.imageMode] # Requires Viu.
+enable = true
+path   = "/home/cysul/Imagens/Geral/OneShot_Niko_Vector.png" # Please only use absolute paths.
+scale  = 28
+margin = [1, 1, 1,]
+

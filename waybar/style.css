@@ -1,40 +1,125 @@
-@define-color foreground #eeeeee;
-@define-color foreground-inactive #aaaaaa;
-@define-color background #000000;
 
 * {
-    font-family: FiraCode Nerd Font;
-    font-size: 15px;
-    padding: 0;
+    font-family: "Determination Sans";
+    font-size: 15px;  /* Slightly smaller font size */
+    font-weight: 500;
     margin: 0;
+    padding: 0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
 
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 3px;
+    min-height: 0;
+    margin: 0.2em 0.3em 0.2em 0.3em;
+}
+
+/* The whole bar */
 #waybar {
-    color: @foreground;
     background-color: transparent;
-    
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-radius: 0px;
+    margin: 0px 0px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
 #workspaces button {
+    border-radius: 5px;
     color: @foreground;
-    padding-left: 0.5em;
+    background-color: #111827;
+    transition: all 0.3s ease-in-out;
+    font-size: 15px;  /* Slightly smaller font size */
 }
 
-#workspaces button.empty {
-    color: @foreground-inactive;
+#workspaces button.active {
+    color: @foreground;
+    background: #FF5733;
 }
 
-#memory,
-#temperature {
-    padding-left: 1em
+#workspaces button:hover {
+    background: #333333;
 }
 
-#pulseaudio,
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#workspaces {
+    background-color: #111827;
+    border-radius: 14px;
+    padding: 3px 6px;  /* Adjusted padding to reduce height */
+}
+
+#window {
+    background-color: #111827;
+    font-size: 15px;   /* Slightly smaller font size */
+    font-weight: 800;
+    color: @foreground;
+    border-radius: 14px;
+    padding: 3px 6px;  /* Reduced padding */
+    margin: 2px;
+    opacity: 1;
+}
+
+#clock,
 #battery,
-#backlight,
-#language,
-#network,
-#bluetooth,
+#cava,
+#pulseaudio,
+#custom-power-menu {
+    background-color: #111827;
+    border-radius: 14px;
+    padding: 6px;  /* Adjusted padding */
+}
+
 #tray {
-    padding-right: 1em 
+    background-color: #111827;
+    border-radius: 14px;
+    padding: 6px;  /* Adjusted padding */
+}
+
+#custom-power {
+    background-color: #111827;
+    border-radius: 14px;
+    padding: 6px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#pulseaudio {
+    color: #c8d2e0;
+}
+
+#clock {
+    color: #c8d2e0;
+}
+
+#cava {
+    background-color: #111827;
+    border-radius: 14px;
+    padding: 6px;  /* Adjusted padding */
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
 }

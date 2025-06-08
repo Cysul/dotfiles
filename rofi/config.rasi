@@ -1,9 +1,9 @@
 configuration {
     modi: "drun";
-    font: "FiraCode Nerd Font 12";
+    font: "Determination Sans 14";
     show-icons: true;
-    icon-theme: "Papirus Dark";
-    display-drun: " :";
+    icon-theme: "Papirus";
+    display-drun: " :3c ";
 }
 
 * {
@@ -17,7 +17,7 @@ configuration {
     hl-color: #bac2de;
     hlt-color: #000000FF;
     alt-color: #111111FF;
-    wbg-color: #1e1e2e99;
+    wbg-color: #1e1e2eCC;
     w-border: 2px solid;
     w-border-color: #b4befe;
     w-padding: 12px;
@@ -34,7 +34,7 @@ listview {
 }
 
 window {
-    transparency: "real";
+    transparency: "true";
     width: 450px;
     border-radius: @b-radius;
     background-color: @wbg-color;
@@ -53,7 +53,7 @@ inputbar {
 }
 
 entry {
-    placeholder: ":3";
+    placeholder: "Choose-Application";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
 }
